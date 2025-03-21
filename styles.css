@@ -1,100 +1,122 @@
 /* Reset y configuración base */
 body {
-    margin: 0;
-    font-family: 'Roboto', sans-serif;
-    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
-    color: #333;
-  }
-  
-  /* Contenedor central responsivo */
-  .full-screen {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem;
-    text-align: center;
-  }
-  
-  /* Estilo del título inicial con tipografía elegante */
-  #titulo {
-    font-family: 'Playfair Display', serif;
-    font-size: 3rem;
-    margin-bottom: 2rem;
-  }
-  
-  /* Contenedor del poema */
-  .poema-container {
-    background: rgba(255, 255, 255, 0.9);
-    padding: 2rem;
-    border-radius: 10px;
-    max-width: 800px;
-    width: 100%;
-    position: relative;
-    min-height: 200px;
-  }
-  
-  /* Texto del poema con tipografía elegante */
-  .typed-text {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.5rem;
-    line-height: 1.8;
-    white-space: pre-line;
-    text-align: left;
-  }
-  
-  /* Indicador de página */
-  .page-indicator {
-    position: absolute;
-    bottom: 10px;
-    right: 15px;
-    font-size: 1rem;
-    color: #666;
-  }
-  
-  /* Overlay inicial a pantalla completa */
-  .overlay {
-    position: fixed;
-    z-index: 9999;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  /* Estilo para el panel de selección de idioma */
-  .language-selection {
-    background: rgba(255,255,255,0.95);
-    padding: 2rem;
-    border-radius: 10px;
-    max-width: 600px;
-    width: 100%;
-  }
-  
-  /* Estilo para el logotipo del parlante */
-  .speaker-icon {
-    font-size: 3rem;
-    margin: 1rem;
-  }
-  
-  /* Resalta la palabra importante */
-  .highlight {
-    color: red;
-  }
-  
-  /* Animación leve para el resaltado */
-  .animated-highlight {
-    animation: pulseHighlight 1s ease-in-out;
-  }
-  
-  @keyframes pulseHighlight {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.1); }
-    100% { transform: scale(1); }
-  }
-  
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+  color: #333;
+  transition: background 1s, filter 1s;
+}
+
+/* Contenedor central responsivo */
+.full-screen {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Estilo del título inicial */
+#titulo {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+/* Contenedor del poema */
+.poema-container {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 800px;
+  width: 100%;
+  position: relative;
+  min-height: 200px;
+}
+
+/* Texto del poema */
+.typed-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  line-height: 1.8;
+  white-space: pre-line;
+  text-align: left;
+}
+
+/* Indicador de página */
+.page-indicator {
+  position: absolute;
+  bottom: 10px;
+  right: 15px;
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Overlay inicial */
+.overlay {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Panel de selección de idioma */
+.language-selection {
+  background: rgba(255,255,255,0.95);
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 600px;
+  width: 100%;
+}
+
+/* Icono del parlante */
+.speaker-icon {
+  font-size: 3rem;
+  margin: 1rem;
+  cursor: pointer;
+}
+
+/* Recuadro final */
+.final-card {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Separación para los botones "Sí" y "No" */
+.final-card .btn {
+  margin: 0 10px;
+  transition: background 0.5s;
+}
+
+/* Botones desactivados inicialmente (oscuros) */
+.final-card .btn:disabled {
+  background-color: #343a40;
+  border-color: #343a40;
+}
+
+/* Animación para agrandar el botón */
+.grow {
+  animation: growButton 3s forwards;
+}
+
+@keyframes growButton {
+  0% { transform: scale(1); }
+  100% { transform: scale(5); }
+}
+
+/* Filtro para escala de grises */
+.grayscale {
+  filter: grayscale(100%);
+}

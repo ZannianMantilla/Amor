@@ -12,26 +12,54 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <!-- EmailJS SDK -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function(){
+      emailjs.init("t1uNCSmhNOKveWnqS");
+    })();
+  </script>
+  <!-- tsParticles para efectos de lluvia -->
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.0/tsparticles.bundle.min.js"></script>
 </head>
 <body>
-  <!-- Overlay de inicio, que cubre toda la pantalla -->
+  <!-- Overlay de inicio -->
   <div id="overlay" class="overlay">
     <button id="startButton" class="btn btn-primary btn-lg">Iniciar</button>
   </div>
 
   <div class="container full-screen" id="mainContainer">
-    <!-- Título inicial con tipografía elegante -->
+    <!-- Título inicial -->
     <h1 id="titulo" class="animate__animated">Amor de mi alma</h1>
-    <!-- Contenedor único para el poema (inicialmente para francés) -->
+    <!-- Contenedor para el poema -->
     <div id="poema-container" class="poema-container" style="display: none;">
       <div id="typedText" class="typed-text"></div>
       <div id="pageIndicator" class="page-indicator"></div>
     </div>
   </div>
 
-  <!-- Elementos de audio -->
+  <!-- Audio de fondo y audio general del poema -->
   <audio id="audioFondo" src="musicafondo.mp3" preload="auto"></audio>
   <audio id="audioPoema" src="audioPoema.mp3" preload="auto"></audio>
+  
+
+  <!-- Audios para el poema en francés -->
+  <audio id="audioFR1" src="FR1.mp3" preload="auto"></audio>
+  <audio id="audioFR2" src="FR2.mp3" preload="auto"></audio>
+  <audio id="audioFR3" src="FR3.mp3" preload="auto"></audio>
+  <audio id="audioFR4" src="FR4.mp3" preload="auto"></audio>
+
+  <!-- Audios para el poema en español -->
+  <audio id="audioES1" src="ES1.mp3" preload="auto"></audio>
+  <audio id="audioES2" src="ES2.mp3" preload="auto"></audio>
+  <audio id="audioES3" src="ES3.mp3" preload="auto"></audio>
+  <audio id="audioES4" src="ES4.mp3" preload="auto"></audio>
+
+  <!-- Audio para la acción "novios" -->
+  <audio id="audioNovios" src="novios.mp3" preload="auto"></audio>
+
+  <!-- Contenedor para tsParticles -->
+  <div id="particles-js" style="position: fixed; top:0; left:0; width:100%; height:100%; z-index: 5000; pointer-events: none;"></div>
 
   <!-- Vinculación a JavaScript -->
   <script src="main.js"></script>
